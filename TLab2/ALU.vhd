@@ -101,7 +101,7 @@ begin
 	U2: LU
 	port map(
 		W => W, 
-		Y => Y, 
+		Y => Yx, 
 		OP => OPx(0), 
 		R => R_LOGIC
 	);

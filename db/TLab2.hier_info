@@ -13,13 +13,9 @@ W[3] => LU:U2.W[3]
 W[3] => SU:U3.W[3]
 W[3] => FLAGS:U5.A3
 Y[0] => Yor0:U0.Y[0]
-Y[0] => LU:U2.Y[0]
 Y[1] => Yor0:U0.Y[1]
-Y[1] => LU:U2.Y[1]
 Y[2] => Yor0:U0.Y[2]
-Y[2] => LU:U2.Y[2]
 Y[3] => Yor0:U0.Y[3]
-Y[3] => LU:U2.Y[3]
 OP[0] => AU:U1.OPau
 OP[0] => LU:U2.OP
 OP[0] => SU:U3.OP
@@ -33,14 +29,14 @@ OP[2] => SEL_SHIFT.IN1
 OP[2] => MUX3:U4.S0
 OP[2] => FLAGS:U5.SEL_AU
 CBi => AU:U1.CBi
-R[0] <= MUX3:U4.R[0]
-R[1] <= MUX3:U4.R[1]
-R[2] <= MUX3:U4.R[2]
-R[3] <= MUX3:U4.R[3]
-CBo <= FLAGS:U5.CBo
-OV <= FLAGS:U5.OVo
-Z <= FLAGS:U5.Z
-GE <= FLAGS:U5.GE
+R[0] << MUX3:U4.R[0]
+R[1] << MUX3:U4.R[1]
+R[2] << MUX3:U4.R[2]
+R[3] << MUX3:U4.R[3]
+CBo << FLAGS:U5.CBo
+OV << FLAGS:U5.OVo
+Z << FLAGS:U5.Z
+GE << FLAGS:U5.GE
 
 
 |ALU|YOR0:U0

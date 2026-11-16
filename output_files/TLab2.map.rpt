@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TLab2
-Sat Nov 14 13:54:32 2026
+Mon Nov 16 10:48:59 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 14 13:54:31 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 16 10:48:59 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; TLab2                                           ;
 ; Top-level Entity Name              ; ALU                                             ;
@@ -283,7 +283,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sat Nov 14 13:54:13 2026
+    Info: Processing started: Mon Nov 16 10:48:42 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TLab2 -c TLab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -340,8 +340,8 @@ Info (21057): Implemented 50 device resources after synthesis - the final resour
     Info (21061): Implemented 30 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Sat Nov 14 13:54:32 2026
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Processing ended: Mon Nov 16 10:48:59 2026
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

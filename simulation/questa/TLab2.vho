@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition"
 
--- DATE "11/14/2026 13:54:47"
+-- DATE "11/16/2026 10:49:15"
 
 -- 
 -- Device: Altera 10M08DAF484C8G Package FBGA484
@@ -92,11 +92,11 @@ ENTITY 	ALU IS
 	Y : IN std_logic_vector(3 DOWNTO 0);
 	OP : IN std_logic_vector(2 DOWNTO 0);
 	CBi : IN std_logic;
-	R : OUT std_logic_vector(3 DOWNTO 0);
-	CBo : OUT std_logic;
-	OV : OUT std_logic;
-	Z : OUT std_logic;
-	GE : OUT std_logic
+	R : BUFFER std_logic_vector(3 DOWNTO 0);
+	CBo : BUFFER std_logic;
+	OV : BUFFER std_logic;
+	Z : BUFFER std_logic;
+	GE : BUFFER std_logic
 	);
 END ALU;
 
