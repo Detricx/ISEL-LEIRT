@@ -27,7 +27,14 @@ signal Cx : std_logic;
 -- OP = 0: calcula A + B + CBi
 -- OP = 1: calcula A - B - CBi
 begin
-	A0: ADDER port map (A => A, B=>Bx, C0 => Cix, S=> R, C4 => Cx);
+	A0: ADDER 
+	port map (
+	A => A, 
+	B=>Bx, 
+	C0 => Cix, 
+	S=> R, 
+	C4 => Cx);
+	
 	B3 <= Bx(3);
 	Cix <= Cbi xor OP;
 	Bx(0) <= B(0) xor OP;

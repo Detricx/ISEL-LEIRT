@@ -29,6 +29,8 @@ begin
 	-- Apenas relevante na subtracao (OP = 001)	
 	-- CBo_AU = 1: ocorreu Borrow (W é inferior a Y + CBi).
 	-- CBo_AU = 0: não ocorreu Borrow (W é maior ou igual a Y + CBi)
+	
+	-- TENHO DE APLICAR UM XOR no final, para ver qual é o maior
 	GE <= SEL_AU and not OP1 and OP0 and not iCBo_AU;
 
 end ARCH_FLAGS;

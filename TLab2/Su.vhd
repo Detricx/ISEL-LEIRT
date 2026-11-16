@@ -21,6 +21,6 @@ begin
 	R(1) <= (W(0) and not OP) or (W(2) and OP);
 	R(0) <= W(1) and OP;
 	
-	COut <= W(3) and not OP;
+	COut <= (W(3) and not OP) or (W(0) and OP);
 end ARCH_SU;
 
