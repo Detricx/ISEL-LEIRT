@@ -36,10 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "OP[2]",
-					"strict" : false
-				},
-				{
 					"name" : "Y[0]",
 					"strict" : false
 				},
@@ -52,15 +48,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[2]",
+					"strict" : false
+				},
+				{
 					"name" : "CBi",
 					"strict" : false
 				},
 				{
 					"name" : "W[1]",
-					"strict" : false
-				},
-				{
-					"name" : "OP[0]",
 					"strict" : false
 				},
 				{

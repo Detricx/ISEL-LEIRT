@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Mon Nov 16 13:09:50 2026
+Mon Nov 16 22:09:31 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -43,13 +43,13 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 16 13:09:50 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 16 22:09:31 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 30                                              ;
-;     Total combinational functions  ; 30                                              ;
+; Total logic elements               ; 31                                              ;
+;     Total combinational functions  ; 31                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 20                                              ;
@@ -187,16 +187,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 30          ;
+; Estimated Total logic elements              ; 31          ;
 ;                                             ;             ;
-; Total combinational functions               ; 30          ;
+; Total combinational functions               ; 31          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 23          ;
-;     -- 3 input functions                    ; 3           ;
-;     -- <=2 input functions                  ; 4           ;
+;     -- 4 input functions                    ; 25          ;
+;     -- 3 input functions                    ; 1           ;
+;     -- <=2 input functions                  ; 5           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 30          ;
+;     -- normal mode                          ; 31          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -207,10 +207,10 @@ on the Quartus Prime software download page.
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; OP[0]~input ;
-; Maximum fan-out                             ; 18          ;
-; Total fan-out                               ; 137         ;
-; Average fan-out                             ; 1.96        ;
+; Maximum fan-out node                        ; OP[1]~input ;
+; Maximum fan-out                             ; 19          ;
+; Total fan-out                               ; 141         ;
+; Average fan-out                             ; 1.99        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,16 +219,16 @@ on the Quartus Prime software download page.
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                         ; Entity Name ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------+-------------+--------------+
-; |ALU                        ; 30 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |ALU                                        ; ALU         ; work         ;
-;    |AU:U1|                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1                                  ; AU          ; work         ;
-;       |ADDSUB:U0|           ; 7 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0                        ; ADDSUB      ; work         ;
-;          |ADDER:A0|         ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0               ; ADDER       ; work         ;
-;             |FULLADDER:FA0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA0 ; FULLADDER   ; work         ;
+; |ALU                        ; 31 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |ALU                                        ; ALU         ; work         ;
+;    |AU:U1|                  ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1                                  ; AU          ; work         ;
+;       |ADDSUB:U0|           ; 9 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0                        ; ADDSUB      ; work         ;
+;          |ADDER:A0|         ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0               ; ADDER       ; work         ;
+;             |FULLADDER:FA0| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA0 ; FULLADDER   ; work         ;
 ;             |FULLADDER:FA1| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA1 ; FULLADDER   ; work         ;
 ;             |FULLADDER:FA2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA2 ; FULLADDER   ; work         ;
-;             |FULLADDER:FA3| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA3 ; FULLADDER   ; work         ;
+;             |FULLADDER:FA3| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA3 ; FULLADDER   ; work         ;
 ;    |FLAGS:U5|               ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|FLAGS:U5                               ; FLAGS       ; work         ;
-;    |MUX3:U4|                ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|MUX3:U4                                ; MUX3        ; work         ;
+;    |MUX3:U4|                ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|MUX3:U4                                ; MUX3        ; work         ;
 ;    |YOR0:U0|                ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ALU|YOR0:U0                                ; YOR0        ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -255,15 +255,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 20                          ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
+; cycloneiii_lcell_comb ; 33                          ;
+;     normal            ; 33                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 23                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 5.48                        ;
+; Average LUT depth     ; 5.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -282,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Nov 16 13:09:34 2026
+    Info: Processing started: Mon Nov 16 22:09:13 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -323,7 +323,7 @@ Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Info (12128): Elaborating entity "YOR0" for hierarchy "YOR0:U0" File: C:/project/ISEL/LSD/quartus/TLab2/ALU.vhd Line: 82
 Info (12128): Elaborating entity "AU" for hierarchy "AU:U1" File: C:/project/ISEL/LSD/quartus/TLab2/ALU.vhd Line: 90
 Info (12128): Elaborating entity "ADDSUB" for hierarchy "AU:U1|ADDSUB:U0" File: C:/project/ISEL/LSD/quartus/TLab2/au.vhd Line: 26
-Info (12128): Elaborating entity "ADDER" for hierarchy "AU:U1|ADDSUB:U0|ADDER:A0" File: C:/project/ISEL/LSD/quartus/TLab2/addsub.vhd Line: 30
+Info (12128): Elaborating entity "ADDER" for hierarchy "AU:U1|ADDSUB:U0|ADDER:A0" File: C:/project/ISEL/LSD/quartus/TLab2/AddSub.vhd Line: 30
 Info (12128): Elaborating entity "FULLADDER" for hierarchy "AU:U1|ADDSUB:U0|ADDER:A0|FULLADDER:FA0" File: C:/project/ISEL/LSD/quartus/TLab2/Adder.vhd Line: 24
 Info (12128): Elaborating entity "LU" for hierarchy "LU:U2" File: C:/project/ISEL/LSD/quartus/TLab2/ALU.vhd Line: 101
 Info (12128): Elaborating entity "SU" for hierarchy "SU:U3" File: C:/project/ISEL/LSD/quartus/TLab2/ALU.vhd Line: 109
@@ -332,14 +332,14 @@ Info (12128): Elaborating entity "FLAGS" for hierarchy "FLAGS:U5" File: C:/proje
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 30 logic cells
+    Info (21061): Implemented 31 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Mon Nov 16 13:09:50 2026
-    Info: Elapsed time: 00:00:16
+    Info: Processing ended: Mon Nov 16 22:09:31 2026
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:37
 
 
