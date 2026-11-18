@@ -1,0 +1,57 @@
+# Intel Quartus Prime generated directories
+**/db/
+**/incremental_db/
+**/output_files/
+**/simulation/
+
+# Quartus project session/state files
+*.qws
+*.qdf
+*.sopcinfo
+
+# Quartus compilation products
+*.sof
+*.pof
+*.rbf
+*.jdi
+*.jditmp
+*.cdf
+*.pin
+*.sld
+*.done
+*.summary
+*.smsg
+*.qmsg
+*.rpt
+*.sopcinfo
+*.tmw_info
+*.sig
+*.chg
+*.qdf
+
+# Quartus database and timing files
+*.cdb
+*.ddb
+*.hdb
+*.kpt
+*.rdb
+*.tdb
+*.idb
+*.hif
+*.cbx.xml
+
+# Questa/ModelSim generated files
+**/rtl_work/
+*.wlf
+transcript
+modelsim.ini
+vsim_stacktrace.vstf
+wlft*
+*_run_msim_rtl_vhdl.do
+*_run_msim_rtl_verilog.do
+
+# Editor and operating-system files
+.vs/
+.vscode/
+Thumbs.db
+.DS_Store
