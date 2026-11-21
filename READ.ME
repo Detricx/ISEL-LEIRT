@@ -1,0 +1,86 @@
+# TLab — Circuitos CMOS
+
+## Descrição
+
+Este projeto implementa a função lógica
+
+```
+Y = A · ¬B · ¬C
+```
+
+num circuito CMOS simulando em LTspice. O projeto foi desenvolvido no âmbito da unidade curricular de Eletrónica e segue a primeira fase do trabalho laboratorial TLab.
+
+## Objetivos da primeira fase
+
+- Construir a tabela de verdade da função `Y = A · ¬B · ¬C`.
+- Implementar a função com dois multiplexers 2:1, utilizando portas de transmissão (TG).
+- Adaptar o circuito para apenas dois circuitos integrados CD4007.
+- Elaborar o esquema elétrico em LTspice.
+- Validar todas as combinações possíveis das entradas através de uma simulação temporal.
+- Confirmar que os resultados simulados correspondem à tabela de verdade.
+
+## Tabela de verdade
+
+| A | B | C | Y |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 |
+
+A saída assume o nível lógico HIGH apenas quando `A = 1`, `B = 0` e `C = 0`.
+
+## Conceção do circuito
+
+A função foi implementada por decomposição em dois multiplexers 2:1:
+
+1. O primeiro multiplexer usa `B` como sinal de seleção.
+   - `B = 0`: `Y = A · ¬C`
+   - `B = 1`: `Y = 0`
+2. O segundo multiplexer usa `C` como sinal de seleção.
+   - `C = 0`: `A · ¬C = A`
+   - `C = 1`: `A · ¬C = 0`
+
+Esta arquitetura permite construir o circuito com duas portas de transmissão principais, complementadas pelos inversores necessários para gerar os sinais negados de `B` e `C`.
+
+## Implementação em LTspice
+
+O circuito usa tecnologia CMOS e foi limitado a dois circuitos integrados CD4007.
+
+- Entradas: sinais PULSE `A`, `B` e `C` com níveis entre 0 V e 5 V.
+- Alimentação: `VDD = 5 V` e massa em 0 V.
+- Cada porta de transmissão é formada por um transistor PMOS e um transistor NMOS em paralelo, controlados por sinais complementares.
+- Os modelos PMOS/NMOS utilizados são definidos para o componente CD4007.
+- A simulação principal é transitória (`.tran`) e percorre as oito combinações possíveis das entradas.
+
+## Ficheiros principais
+
+- `ETLab-final2.asc` — esquema principal da implementação.
+- `testETLab.asc` — esquema de testes da implementação.
+- `CMOS4007.asy` — símbolo do circuito integrado CMOS4007.
+- `NMOSX.asy` e `PMOSX.asy` — símbolos utilizados para os transístores.
+- `chip4007.txt` — subcircuito e modelos SPICE do CD4007.
+- `MOS4007.txt` — modelos SPICE adicionais associados aos transístores 4007.
+- `ETLab.txt` — versão textual/SPICE auxiliar do circuito.
+- `TLab.pdf` — relatório do trabalho laboratorial.
+
+## Como utilizar
+
+1. Instale o LTspice.
+2. Abra `ETLab-final2.asc` no LTspice.
+3. Confirme que os ficheiros de símbolos e modelos estão presentes na pasta do projeto.
+4. Execute a simulação transitória.
+5. Observe os sinais das entradas `A`, `B`, `C` e da saída `Y`.
+
+## Estado do projeto
+
+- Primeira fase: concluída — conceção, implementação, simulação lógica e validação da função.
+- Fases seguintes: **Em desenvolvimento...**
+
+## Ficheiros gerados
+
+Os ficheiros de simulação gerados pelo LTspice, como `.raw`, `.log`, `.fft` e `.net`, estão excluídos pelo `.gitignore`.
