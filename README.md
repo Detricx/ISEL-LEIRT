@@ -1,21 +1,19 @@
 # Projetos de Lógica e Sistemas Digitais (LSD)
 
-Os projetos descrevem e testam circuitos digitais em **VHDL** e **Verilog**, com configurações para síntese na placa
-**DE10-Lite**, baseada num dispositivo **Intel/Altera MAX 10 10M50DAF484C6GES**.
+Coleção de trabalhos práticos de lógica digital desenvolvidos em **VHDL** e **Verilog** para a unidade curricular de **Lógica e Sistemas Digitais (LSD)** do ISEL. Os projetos usam a placa **DE10-Lite**, baseada no FPGA **Intel/Altera MAX 10 10M50DAF484C6GES**.
 
-## Conteúdo
+## Projetos
 
-| Diretório | Descrição |
-| --- | --- |
-| [`TLab1`](./TLab1) | Circuitos de deteção de paridade e de zeros, incluindo `ParImpar`, `PnZ4` e `PnZ10`, com testbench para `PnZ10`. |
-| [`TLab2`](./TLab2) | Implementação hierárquica de uma **ALU de 4 bits**, com unidade aritmética, unidade lógica, deslocamentos, multiplexagem e geração de flags. |
-| [`Somatorio`](./Somatorio) | Componentes de uma unidade aritmética/somador, incluindo full adders, somador, subtrator e testbenches. |
-| [`TP2`](./TP2) | Exercícios adicionais de descrição e teste de circuitos digitais. |
-| [`AND_OR_191026`](./AND_OR_191026) | Unidade lógica combinatória com operações AND e OR sobre vetores de 4 bits. |
-| [`OR_XNOR_191026`](./OR_XNOR_191026) | Variação da unidade lógica com operações OR e XNOR sobre vetores de 4 bits. |
-| [`backup`](./backup) | Cópia de trabalho de versões anteriores, mantida para referência. |
+| Diretório | Descrição | Documentação |
+| --- | --- | --- |
+| [`TLab1`](./TLab1) | Circuitos de paridade e deteção de valores positivos/negativos e zeros, incluindo `ParImpar`, `PnZ4` e `PnZ10`, com testbench para `PnZ10`. | [Formulário](./TLab1/Formulario.pdf) · [Relatório](./TLab1/Relatorio.pdf) |
+| [`TLab2`](./TLab2) | ALU hierárquica de 4 bits, com unidade aritmética, unidade lógica, deslocamentos, multiplexagem e geração de flags. | [Formulário](./TLab2/Formulario.pdf) · [Relatório](./TLab2/Relatorio.pdf) |
+| [`Somatorio`](./Somatorio) | Unidade aritmética com somador, subtrator, carry/borrow e testbenches. | [Formulário](./Somatorio/Formulario.pdf) |
+| [`UnidadeAritmetica`](./UnidadeAritmetica) | Versão/organização da unidade aritmética com somador, subtrator e geração de sinais de estado. | — |
+| [`ProjectAndOr`](./ProjectAndOr) | Unidade lógica combinatória que seleciona entre operações AND e OR sobre vetores de 4 bits. | [Enunciado](./ProjectAndOr/moodleFiles/LSD_2627i_LABc.pdf) |
+| [`ProjectOrXnor`](./ProjectOrXnor) | Unidade lógica combinatória que seleciona entre operações OR e XNOR sobre vetores de 4 bits. | [Formulário](./ProjectOrXnor/Formulario.pdf) · [Enunciado](./ProjectOrXnor/moodleFiles/LSD_2627i_LABc.pdf) |
 
-Os diretórios dos projetos incluem os ficheiros `.qpf` e `.qsf` do Quartus, fontes HDL, testbenches, atribuições de pinos e, em alguns casos, resultados de compilação e scripts de simulação para Questa/ModelSim.
+Cada diretório contém, consoante o projeto, ficheiros `.qpf` e `.qsf` do Quartus, fontes HDL, testbenches, atribuições de pinos e scripts de simulação. Os ficheiros gerados pelo Quartus e pela ferramenta de simulação são excluídos pela configuração do [`.gitignore`](./.gitignore).
 
 ## Tecnologias e ferramentas
 
@@ -53,8 +51,7 @@ O projeto [`TLab2`](./TLab2) organiza a ALU em componentes reutilizáveis:
 
 ## Organização dos ficheiros gerados
 
-Pastas como `db`, `incremental_db`, `output_files` e `simulation` contêm informação gerada pelo Quartus ou pelas ferramentas de simulação. Esses
-ficheiros podem ser recriados ao abrir e compilar os projetos; os fontes HDL e as configurações `.qsf`/`.qpf` são os elementos principais para reutilizar os trabalhos.
+Pastas como `db`, `incremental_db`, `output_files` e `simulation` contêm informação gerada pelo Quartus ou pelas ferramentas de simulação. Esses ficheiros podem ser recriados ao abrir e compilar os projetos; os fontes HDL e as configurações `.qsf`/`.qpf` são os elementos principais para reutilizar os trabalhos.
 
 ## Contexto
 
