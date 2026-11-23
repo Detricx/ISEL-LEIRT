@@ -1,0 +1,53 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY LabF IS
+PORT(	CLK : in std_logic;
+	   RST : in std_logic;
+		DataIn : IN STD_LOGIC_VECTOR(3 downto 0);
+		UpDown : IN STD_LOGIC; 
+		PL, CE : IN STD_LOGIC;
+		clear : IN STD_LOGIC;
+		CountValue : out std_logic_VECTOR(3 downto 0);
+		HEX0 : out std_logic_VECTOR(7 downto 0)
+		);
+END LabF;
+
+ARCHITECTURE logicFunction OF LabF IS
+
+component countUD
+PORT(	CLK : in std_logic;
+	   RST : in std_logic;
+		D : IN STD_LOGIC_VECTOR(3 downto 0);
+		UpDown : IN STD_LOGIC; 
+		PL, CE : IN STD_LOGIC;
+		Q : out std_logic_VECTOR(3 downto 0)
+		);
+END component;
+
+component decoderHex
+PORT (A: in std_logic_vector(3 downto 0);		
+	   clear : in std_logic;
+	   HEX0 : out std_logic_vector(7 downto 0));		
+END component;
+
+component CLKDIV
+generic(div: natural := 50000000);
+port ( clk_in: in std_logic;
+		 clk_out: out std_logic);
+end component;
+
+signal qx : std_logic_vector(3 downto 0);
+signal clks : std_logic;
+	
+BEGIN
+
+U0: countUD port map();
+
+U1 : decoderHex port map();
+
+U2 : CLKDIV port map();
+
+CountValue <= qx;
+
+END LogicFunction;
