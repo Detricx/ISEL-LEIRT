@@ -1,0 +1,20 @@
+# LTspice generated simulation files
+*.raw
+*.op.raw
+*.log
+*.fft
+*.net
+
+# LTspice temporary and backup files
+*.bak
+*.tmp
+*.autosave
+*.save
+*.tlog
+
+# LTspice plot/export temporary files
+*.plt.tmp
+
+# General editor and operating system files
+Thumbs.db
+.DS_Store
